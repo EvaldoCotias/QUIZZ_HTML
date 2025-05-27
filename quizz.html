@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Quiz Ancestrais</h1></header>
+    <main>
+        <h2>Quem foram os primeiros habitantes do Brasil?</h2>
+        <button onclick="responder('a')">A) Portugueses</button>
+        <button onclick="responder('b')">B) Africanos</button>
+        <button onclick="responder('c')">C) Povos indígenas</button>
+        <p id="resposta"></p>
+    </main>
+    <script>
+        function responder(resp) {
+            const resultado = document.getElementById("resposta");
+            if (resp === 'c') {
+                resultado.textContent = "Correto! Os povos indígenas habitavam o Brasil muito antes da chegada dos portugueses.";
+            } else {
+                resultado.textContent = "Errado! Tente novamente.";
+            }
+        }
+    </script>
+</body>
+</html>
